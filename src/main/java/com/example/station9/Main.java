@@ -13,8 +13,36 @@ public class Main {
         test(itemPrices3);
     }
 
+        // ここから    
     public static void test(int[] itemPrices) {
-        // ここから
-        // ここまで
+        int total = 0;
+        int[] over2000 = new int[itemPrices.length];
+        for (int itemPrice : itemPrices) {
+            total += itemPrice;
+        }
+        for (int i = 0; i < itemPrices.length; i++) {
+            if (itemPrices[i] >= 2000) {
+                over2000[i] = itemPrices[i];
+            }
+        }
+        String coupon = "";
+        if (total < 5000) {
+            coupon = "A";
+        } else if (total >= 5000) {
+            total /= 0.9;
+            if (total < 5000) 
+                coupon = "A";
+            coupon = "B";
+        } 
+        for (int i = 0; i < over2000.length; i++) {
+            if (over2000[i] >= 2000) {
+                coupon = "C";
+            }
+        
+        }
+        System.out.println(coupon);
     }
+
+        // ここまで
+    
 }

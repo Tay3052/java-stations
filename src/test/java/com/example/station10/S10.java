@@ -6,6 +6,7 @@ import java.lang.reflect.Method;
 
 import static org.junit.Assert.assertEquals;
 
+
 public class S10 {
 
     @Test
@@ -17,5 +18,8 @@ public class S10 {
         assertEquals(11878.9, (float) method.invoke(main, 9999), 0.01);
         assertEquals(11000, (float) method.invoke(main, 10000), 0.01);
         assertEquals(22000, (float) method.invoke(main, 20000), 0.01);
+    
+        
     }
+    
 }
